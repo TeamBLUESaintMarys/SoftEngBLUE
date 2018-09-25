@@ -8,7 +8,7 @@ You will need to import the following: java.util.ArrayLists java.util.Scanner
 
 #### Author
 
-    Tye B, Daniel D, Kyle H, Ben H, Devano B, R
+    Tye B, Daniel D, Kyle H, Ben H, Devano B, Razan VK
 
     aka Team BLUE
 ##### License

@@ -92,86 +92,25 @@
 
 <!--User Information Page/Form -->
 <div data-role="page" id="pageUserInfo">
-    <div data-role="footer">
-        <h1><a href="#pageMenu" data-role="button"><h1>BACK</h1></a></h1>
+    <div data-role="header" data-position="fixed">
+        <h1 style="min-width: 100%; align-items: left; margin-left: 10px; margin-right: 40px; padding-right: 20px;">
+        <a href="#pageMenu" data-role="button"><h1>BACK</h1></a></h1> <!-- Button Added ~DD -->
+
     </div>
     <!-- /header -->
   <div data-role="content">
-    <!--  <form id="frmUserForm" action="">
-        <div data-role="fieldcontain">
-          <label for="txtUser">User name: </label>
-          <input type="text" placeholder="JohnSmith"
-          name="txtUser" data-mini="false" id="txtUser"
-          value="" required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="txtFirstName">First Name: </label>
-          <input type="text" placeholder="First Name" name="txtFirstName"
-          data-mini="false" id="txtFirstName" value=""
-          required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="txtLastName">Last Name: </label>
-          <input type="text" placeholder="Last Name" name="txtLastName"
-          data-mini="false" id="txtLastName" value=""
-          required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="datBirthdate">Birthdate: </label>
-          <input type="date" name="datBirthdate" data-mini="false"
-          id="datBirthdate" value="" required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="changePassword">Edit Password: </label>
-          <input type="password" placeholder="New Password" name="changePassword"
-          data-mini="false" id="changePassword" value=""
-          required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="txtHealthCardNumber">Health Card Number: </label>
-          <input type="text" placeholder="Health Card Number"
-          name="txtHealthCardNumber" data-mini="false"
-          id="txtHealthCardNumber" value="" required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="slcCancerType" class="select">Cancer Type: </label>
-          <select name="slcCancerType" id="slcCancerType" data-mini="false"
-          data-native-menu="false" required>
-            <option>Select Cancer Type</option>
-            <option value="Papillary">Papillary</option>
-            <option value="Follicular">Follicular</option>
-            <option value="Medullary">Medullary</option>
-            <option value="Anaplastic">Anaplastic</option>
-          </select>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="slcCancerStage" class="select">Cancer Stage: </label>
-          <select name="slcCancerStage" id="slcCancerStage" data-mini="false"
-          data-native-menu="false" required>
-            <option>Select Cancer Stage</option>
-            <option value="StageOne">Stage I</option>
-            <option value="StageTwo">Stage II</option>
-            <option value="StageThree">Stage III</option>
-            <option value="StageFour">Stage IV</option>
-          </select>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="slcTSHRange" class="select">Target TSH Range: </label>
-          <select name="slcTSHRange" id="slcTSHRange" data-mini="false"
-          data-native-menu="false" required>
-            <option>Select TSH Range</option>
-            <option value="StageA">A: 0.01-0.1 mIU/L</option>
-            <option value="StageB">B: 0.1-0.5 mIU/L</option>
-            <option value="StageC">C: 0.35-2.0 mIU/L</option>
-          </select>
-        </div>
-        <input type="button" id="btnUserUpdate" data-icon="check"
-        data-iconpos="left" value="Update" data-inline="true">
-    </form>-->
-    <h3>Memos go here</h3>
-</div>
-<div data-role="footer">
+    <a href="" data-role="button"><h2>Memos go here</h2></a>
+    <a href="" data-role="button"><h2>Another Sample</h2></a>
+    <a href="" data-role="button"><h2>Call the doctor</h2></a>
+    <a href="" data-role="button"><h2>Things to bring this weekend</h2></a>
+    <a href="" data-role="button"><h2>Supper ideas</h2></a>
+    <a href="" data-role="button"><h2>Supper ideas 2</h2></a>
+    <a href="" data-role="button"><h2>Supper ideas 3</h2></a>
+</div> <!-- Sample memo buttons  ~DD-->
+
+<div data-role="footer" data-position="fixed">
     <h1><a href="#newMemo" data-role="button"><h1>NEW</h1></a></h1>
+    <!-- Fixed to bottom footer ~DD -->
 </div>
 
 </div>
@@ -316,12 +255,6 @@
 </div>
 
 <!--Custom Javascript/Jquery -->
-<script src="scripts/RGraph.common.core.js"></script>
-<script src="scripts/RGraph.common.effects.js"></script>
-<script src="scripts/RGraph.line.js"></script>
-<script src="scripts/RGraph.cornergauge.js"></script>
-<script src="scripts/RGraph.hprogress.js"></script>
-
 <script src="scripts/UserForm.js"></script>
 <script src="scripts/Table.js"></script>
 <script src="scripts/Navigation.js"></script>

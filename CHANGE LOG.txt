@@ -1,3 +1,8 @@
+:: 27/09/18 :: DANIEL ::
+
+CHANGED:
+>index.html :: Memos changed, old code removed new layout finalized
+
 :: 26/09/18 :: DANIEL ::
 
 ADDED: 

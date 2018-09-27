@@ -1,0 +1,14 @@
+:: 26/09/18 :: DANIEL ::
+
+ADDED: 
+>CHANGELOG.TXT
+
+CHANGED:
+>Navigation.js :: changed to open locally until database can be set up
+>pageLoader.js :: commented out unused functions
+>index.html :: changed menu options, changed memo page
+>README.md :: updated license
+
+REMOVED:: 
+>RGraph stuff
+>Advice.js

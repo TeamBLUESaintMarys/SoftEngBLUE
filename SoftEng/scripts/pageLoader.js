@@ -23,15 +23,15 @@ $(document).on("pageshow", function () {
     showUserForm();
   } else if ($('.ui-page-active').attr('id') ==
     "pageRecords") {
-    loadUserInformation();
-    listRecords();
+    //loadUserInformation();
+    //listRecords();
   } else if ($('.ui-page-active').attr('id') ==
     "pageAdvice") {
-    advicePage();
-    resizeGraph();
+    //advicePage();
+    //resizeGraph();
   } else if ($('.ui-page-active').attr('id') ==
     "pageGraph") {
-    drawGraph();
-    resizeGraph();
+    //drawGraph();
+    //resizeGraph();
   }
 });

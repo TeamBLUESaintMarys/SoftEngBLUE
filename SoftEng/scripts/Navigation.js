@@ -22,13 +22,21 @@ function addValueToPassword(button) {
 /* On the main page, after password entry, directs
  * user to main page, legal disclaimer if they
  * have not yet agreed to it
+ * 26/09/18 Edited credentials to be local for testing purposes. 
+ * Use USER: me@yay.com
+ * And PASS: 1111
+ * to access
  */
 $("#btnEnter").click(function () {
   var loginCredentials = {
     email: $("#email").val(),
     password: $("#passcode").val()
   };
-  $.post(SERVER_URL + '/login',
+  if (loginCredentials.email == $("#email").val() && loginCredentials.password == $("#passcode").val())
+  {
+    return $.mobile.changePage("#pageMenu");
+  }
+  /*$.post(SERVER_URL + '/login',
     loginCredentials,
     function (data) {
       if (data && data.email ==
@@ -58,7 +66,8 @@ $("#btnEnter").click(function () {
       }
     }).fail(function (error) {
     alert(error.responseText);
-  });
+  });*/
+
 });
 
 /* Records that the user has agreed to the legal

@@ -19,18 +19,18 @@ $(window).resize(function () {
  */
 $(document).on("pageshow", function () {
   if ($('.ui-page-active').attr('id') ==
-    "pageUserInfo") {
-    showUserForm();
+    "pageMemo") {
+    //showUserForm();
   } else if ($('.ui-page-active').attr('id') ==
-    "pageRecords") {
+    "pageEvents") {
     //loadUserInformation();
     //listRecords();
   } else if ($('.ui-page-active').attr('id') ==
-    "pageAdvice") {
+    "pageMessanger") {
     //advicePage();
     //resizeGraph();
   } else if ($('.ui-page-active').attr('id') ==
-    "pageGraph") {
+    "pageRelax") {
     //drawGraph();
     //resizeGraph();
   }

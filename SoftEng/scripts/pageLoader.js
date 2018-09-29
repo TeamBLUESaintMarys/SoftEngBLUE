@@ -33,5 +33,9 @@ $(document).on("pageshow", function () {
     "pageRelax") {
     //drawGraph();
     //resizeGraph();
-  }
+  } else if ($('.ui-page-active').attr('id') ==
+    "pageNewMemo") {
+    //drawGraph();
+    //resizeGraph();
+  } 
 });

@@ -17,5 +17,5 @@ BSD-2CLAUSE
 This software is open source and provided as is. Team Blue accepts no liability for this software. Use at your own risk.
 
 ##### Sources
-Some of this code was taken from the code open code in the Saint Mary's Moblie App deveoplement class winter 2018.
+Saint Mary's Moblie App developement class winter 2018 thyroid app code was used a template for this project.
 

@@ -101,7 +101,7 @@
     </div>
     <!-- /header -->
   <div data-role="content">
-    <a href="" data-role="button"><h2>Memos go here</h2></a>
+    <a href="#pageDisplayMemo" data-role="button"><h2>Memos go here</h2></a>
     <a href="" data-role="button"><h2>Another Sample</h2></a>
     <a href="" data-role="button"><h2>Call the doctor</h2></a>
     <a href="" data-role="button"><h2>Things to bring this weekend</h2></a>
@@ -111,12 +111,69 @@
 </div> <!-- Sample memo buttons  ~DD-->
 
 <div data-role="footer" data-position="fixed">
-    <h1><a href="#newMemo" data-role="button"><h1>NEW</h1></a></h1>
+    <h1><a href="#pageNewMemo" data-role="button"><h1>NEW</h1></a></h1>
     <!-- Fixed to bottom footer ~DD -->
 </div>
 
 </div>
 
+<!-- NEW MEMO PAGE -->
+<!-- 29/09/18 ADDED BY DANIEL -->
+<div date-role="page" id="pageNewMemo">
+    <div data-role="header" data-position="fixed">
+        <h1 style="min-width: 100%; align-items: left; margin-left: 10px; margin-right: 40px; padding-right: 20px;">
+        <a href="#pageMemo" data-role="button"><h1>DISCARD</h1></a></h1>
+    </div>
+    <div data-role="content">
+        <form id="frmNewRecordMemo" action="">
+        <div data-role="fieldcontain">
+          <div data-role="fieldcontain">
+            <label for="memoTitle"><h2>TITLE: </h2></label><br>
+            <input type="text" name="memoTitle" data-mini="false"
+            id="memoTitle" value="">
+            </div>
+        </div>
+        <div data-role="fieldcontain">
+            <label for="memoText"><h2>MEMO TEXT:</h2></label><br>
+            <textarea rows="4" cols="80" style="resize: none;" maxlength="2000"></textarea>
+            <!-- <input type="text" step="10"  name="memoText" id="memoText" value=""> -->
+        </div>
+        </form>
+
+    </div>
+    
+    <div data-role="footer" data-position="fixed">
+        <h1><a href="#newMemo" data-role="button"><h1>SAVE</h1></a></h1>
+    </div>
+
+</div><!-- CLOSE NEWMEMO -->
+
+<div date-role="page" id="pageDisplayMemo">
+    <div data-role="header" data-position="fixed">
+        <h1 style="min-width: 100%; align-items: left; margin-left: 10px; margin-right: 40px; padding-right: 20px;">
+        <a href="#pageMemo" data-role="button"><h1>DISCARD</h1></a></h1>
+    </div>
+    <div data-role="content">
+        <form id="frmNewRecordMemo" action="">
+        <div data-role="fieldcontain">
+          <div data-role="fieldcontain">
+            <input type="text" name="memoTitle" data-mini="false"
+            id="memoTitle" value="THIS IS A MEMO" readonly="true">
+            </div>
+        </div>
+        <div data-role="fieldcontain">
+            <textarea rows="4" cols="80" style="resize: none;" maxlength="2000" readonly="true">The text for memos will be placed in this spot by our javascript. It will be taken from the server.</textarea>
+            <!-- <input type="text" step="10"  name="memoText" id="memoText" value=""> -->
+        </div>
+        </form>
+
+    </div>
+    
+    <div data-role="footer" data-position="fixed">
+        <h1><a href="#newMemo" data-role="button"><h1>SAVE</h1></a></h1>
+    </div>
+
+</div><!-- CLOSE NEWMEMO -->
 <!-- Menu page -->
 <!-- 26/02/18 Removed Header, changed menu options, made text larger ~Daniel-->
 <div data-role="page" id="pageMenu">
@@ -159,8 +216,8 @@
 </div>
 </div>
 
-<!-- New Record Form-->
-<div data-role="page" id="pageNewMemo">
+<!-- New Record Form -- TODO : DELETE -->
+<div data-role="page" id="delete">
     <div data-role="header">
       <a href="#pageMenu" data-role="button" data-icon="bars"
       data-iconpos="left" data-inline="true">Menu</a>

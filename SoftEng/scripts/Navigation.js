@@ -32,11 +32,11 @@ $("#btnEnter").click(function () {
     email: $("#email").val(),
     password: $("#passcode").val()
   };
-  if (loginCredentials.email == $("#email").val() && loginCredentials.password == $("#passcode").val())
+  /*if (loginCredentials.email == $("#email").val() && loginCredentials.password == $("#passcode").val())
   {
     return $.mobile.changePage("#pageMenu");
   }
-  /*$.post(SERVER_URL + '/login',
+  $.post(SERVER_URL + '/login',
     loginCredentials,
     function (data) {
       if (data && data.email ==

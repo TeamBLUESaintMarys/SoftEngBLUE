@@ -1,9 +1,24 @@
-:: 27/09/18 :: DANIEL ::
+:: 29/09/18 :: -----------------------------------------------------
+
+CHANGED:
+>index.html :: New memo and display memo added by Daniel
+            :: Events Page added by Kyle
+            :: New Event Added by Razan
+            :: Code tidy by Daniel
+REMOVED::
+>GraphAnimate.html
+
+:: 28/09/18 :: -----------------------------------------------------
+
+CHANGED:
+>index.html :: Messenger page added by Devano, Tye, Ben and Razan
+
+:: 27/09/18 :: DANIEL :: -------------------------------------------
 
 CHANGED:
 >index.html :: Memos changed, old code removed new layout finalized
 
-:: 26/09/18 :: DANIEL ::
+:: 26/09/18 :: DANIEL :: -------------------------------------------
 
 ADDED: 
 >CHANGELOG.TXT

@@ -66,9 +66,9 @@
   <div data-role="content">
       This is a project made on behalf of Saint Mary's University to help the residence at Northwoord Care Center.
       This project and app is completely open-source in nature and my by used by anyone.
-      
+
       Regards,
-      
+
       -Team BLUE
       <br>
       <a href="javascript:void(0)" id="noticeYes" data-role="button"
@@ -85,9 +85,9 @@
   <div data-role="content">
        This is a project made on behalf of Saint Mary's University to help the residence at Northwoord Care Center.
        This project and app is completely open-source in nature and my by used by anyone.
-       
+
        Regards,
-       
+
        -Team BLUE
   </div>
 </div>
@@ -108,13 +108,44 @@
     <a href="" data-role="button"><h2>Supper ideas</h2></a>
     <a href="" data-role="button"><h2>Supper ideas 2</h2></a>
     <a href="" data-role="button"><h2>Supper ideas 3</h2></a>
-</div> <!-- Sample memo buttons  ~DD-->
+  </div> <!-- Sample memo buttons  ~DD-->
 
 <div data-role="footer" data-position="fixed">
     <h1><a href="#newMemo" data-role="button"><h1>NEW</h1></a></h1>
     <!-- Fixed to bottom footer ~DD -->
 </div>
 
+</div>
+
+
+<!--Event Page ~Razan-->
+<div data-role="page" id="eventPage">
+    <div data-role="header" data-position="fixed">
+        <h1 style="min-width: 100%; align-items: left; margin-left: 10px; margin-right: 40px; padding-right: 20px;">
+        <a href="#pageMenu" data-role="button"><h1>BACK</h1></a></h1> <!-- Button Added ~DD -->
+
+    </div>
+    <!-- /header -->
+  <div data-role="content">
+    <a href="" data-role="button"><h2>WHAT</h2></a>
+    <a href="" data-role="button"><h2>WHO</h2></a>
+    <a href="" data-role="button"><h2>WHERE</h2></a>
+    <a href="" data-role="button"><h2>WHEN</h2></a>
+
+
+  </div> <!-- Sample event buttons -->
+
+<form name="memoMessage" action="">
+	<div class="ui-input-text ui-shadow-inset ui-corner-all ui-btn-shadow ui-body-c">
+      	<input name="usermsg" type="text" id="usermsg" size="63" class="ui-input-text ui-body-c">
+    </div>
+
+
+	<div data-role="footer" data-position="fixed">
+		<h1><a href="" data-role="button"><h1>Submit</h1></a></h1>
+	<!-- Fixed to bottom footer ~DD -->
+	</div>
+</form>
 </div>
 
 <!-- Menu page -->
@@ -206,7 +237,7 @@
 <div data-role="page" id="pageMessanger">
     <div data-role="header" data-position="fixed">
          <h1 style="min-width: 100%; align-items: left; margin-left: 10px; margin-right: 40px; padding-right: 20px;">
-        <a href="#pageMenu" data-role="button"><h1>BACK</h1></a></h1> 
+        <a href="#pageMenu" data-role="button"><h1>BACK</h1></a></h1>
     </div>
     <div id="wrapper">
     <div id="menu">
@@ -214,16 +245,16 @@
         <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
         <div style="clear:both"></div>
     </div>
-     
+
     <div id="chatbox"></div>
-     
+
     <form name="message" action="">
         <input name="usermsg" type="text" id="usermsg" size="63" />
         <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
     </form>
 </div>
-    
-    
+
+
     <div data-role="footer" data-position="fixed">
         <h1><a href="#newMessage" data-role="button"><h1>NEW</h1></a></h1>
     </div>

@@ -1,4 +1,4 @@
-var SERVER_URL = "http://127.0.0.1:3000";
+var SERVER_URL = "http//140.184.230.210:34567";
 
 // Updates records on the server to match the records on the device
 $("#btnUpload").click(function () {

@@ -2,38 +2,43 @@
 <html lang=en>
 
 <head>
-    <title>Software Eng NW Project</title>
+    <title>Assitive Living Made Easy </title>
 
     <!--Adjusting the page on mobile screen  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-
     <!-- CSS -->
-    <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+    <!--<link rel="stylesheet" href="{% static '/css/jquery.mobile-1.3.1.min.css' %}" />-->
     <link rel="stylesheet" href="css/bootstrap.css" />
-    <script src="scripts/jquery-1.9.1.min.js"></script>
-    <script src="scripts/chromeFileProtocolFix.js"></script>
-    <script src="scripts/jquery.mobile-1.3.1.min.js"></script>
-    <link rel="stylesheet" href="css/messenger.css" />
+    <!--<script src="{% static '/scripts/jquery-1.9.1.min.js' %}"></script>-->
+    <script src="scripts/chromeFileProtocolFix.js" ></script>
+    <!--<script src="{% static '/scripts/jquery.mobile-1.3.1.min.js' %}"></script>-->
+    
+    <link rel="stylesheet" href= "css/messenger.css" />
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+
 </head>
 
 <body>
 
 <!-- Start of first page -->
-<div data-role="page" id="pageHome">
+<div data-role="page" id="pageHome" >
     <div data-role="header">
         <h1>TEAM BLUE</h1>
     </div>
 
-    <div data-role="content">
-        USER:
-        <input type="text" id="userName"></input>
-        Password :
-        <input type="password" id="passcode"></input>
+        <input name = 'userName' type="text" id="userName">UserName :</input>
+        <input name = 'passcode' type="password" id="passcode">PassCode : </input>
 
         <div data-role="controlgroup" id="numKeyPad">
-            <a href="#pageMenu" id="btnEnter" type="submit">Log In</a>
-            <a href="#pageMemo" data-role="button" id="btnCreateUser">Create New User</a>
+            <a id = "LogInButton" data-role="button" id="LogIn" >LogIn</a>
+            <a href="#createuser" data-role="button" id="btnCreateUser" data-transition="flip">Create New User</a>
+            <div id = "loginError"></div>
         </div>
         <div data-role="controlgroup" data-type="horizontal" align="center">
             <a data-role="button" onclick="addValueToPassword(7)">7</a>
@@ -55,7 +60,9 @@
             <a data-role="button" onclick="addValueToPassword('bksp')"
             data-icon="delete">del</a>
         </div>
+       
     </div>
+
     </div>
 </div>
 
@@ -75,7 +82,10 @@
        -Team BLUE
     </div>
 </div>
+<!--About Page -->
+<div data-role="page" id="createuser">
 
+</div>
 <!-------------------------- Menu page --------------------------------->
 <div data-role="page" id="pageMenu">
     <div data-role="content">
@@ -242,16 +252,20 @@
             <div style="clear:both"></div>
         </div>
 
-        <div id="chatbox"></div>
+        <div id="chatbox">
+            <p> Devano:Place Holder Hello Nyhgcgcgcutyugcutch  j j  bjg jg jg jg jg j j j jh j j j j j uykktogtu name is devano</p>
+            <p> Devano:Place Holder Hello Ny name is devano</p>
+            <p> Devano:Place Holder Hello Ny name is devano</p>
+        </div>
 
         <form name="message" action="">
-            <input name="usermsg" type="text" id="usermsg" size="63" />
+            <input name="usermsg" type="text" id="usermsg" size="100" />
             <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
         </form>
     </div>
 
     <div data-role="footer" data-position="fixed">
-        <h1><a href="#newMessage" data-role="button"><h1>NEW</h1></a></h1>
+        
     </div>
 </div>
 
@@ -292,12 +306,17 @@
 
 <!--Custom Javascript/Jquery -->
 <script src="scripts/UserForm.js"></script>
+
 <script src="scripts/Table.js"></script>
+
 <script src="scripts/Navigation.js"></script>
+
 <script src="scripts/Sync.js"></script>
+
 <script src="scripts/pageLoader.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
-<script type="text/javascript"></script>
+
+<script src="scripts/loginScript.js" ></script>
+
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 /* REPLACE PLACEHOLDER DATA WITH SERVER CREDENTIALS BEFORE UPLOADING */
-var bcrypt = require('bcrypt');
+//var bcrypt = require('bcrypt');
 var express = require('express');
 var mongodb = require('mongodb');
 
@@ -9,7 +9,7 @@ var mongodb = require('mongodb');
 // ID, password, databse, and ports
 const SERVER_PORT = PORT;//replace with your own port
 var user = 'USER';
-var password = 'PASSWORD';
+var password = 'PW';
 var database = 'DATABASE';
 
 //#############################################
@@ -28,8 +28,7 @@ var connectionString = 'mongodb://' + user + ':' + password + '@' +
 //#############################################
 //the var for the university collections
 var userCollection;
-var memoCollection;
-var NAME_OF_COLLECTION = "User"; //NAME OF COLLECTION
+var NAME_OF_COLLECTION = "NAME"; //NAME OF COLLECTION
 //#############################################
 
 
@@ -52,20 +51,15 @@ app.use('/css', express.static(__dirname + '/css'));
 app.use(express.static(__dirname));
 
 
-
 //now connect to the db
 mongodb.connect(connectionString, function (error, db) {
     
-    //if something is wrong, it'll crash
-    //you could add a try-catch block to handle it, 
-    //but not needed for the assignment
     if (error) {
         throw error;
-    }//end if
+    }else console.log("Connection with mongo established");//end if
 
    	//#############################################
     userCollection = db.collection(NAME_OF_COLLECTION);
-    memoCollection = db.collection(MEMO_COLLECTION);
     //#############################################
 
 
@@ -85,27 +79,38 @@ mongodb.connect(connectionString, function (error, db) {
     });
 });
 
-app.post('/verifyUser', function(request, response)
-{
-	var searchKey = new RegExp(request.body.User, "i");
-	var pw = new RegExp(request.body.Password, "i");
-	console.log("Checking record for: " + searchKey.toString() );
-
-	userCollection.find({"User" : searchKey},
-		function (err, result)
-		{
-			if (err)
-			{
-				return response.send(400, "Password or username incorrect");
-			}
-			else if (result.password != pw)
-			{
-				return response.send(400, "Password or username incorrect");
-			}
-
-			NAME_OF_COLLECTION = searchKey;
-			return response.send(200, true);
-		});
-
-});
+app.post('/verifyUser', 
+    function(request, response)
+    {
+    	console.log("Request made");
+        var searchKey = request.body.userName;
+    	var pw = request.body.passcode;
+    	console.log("Checking record for At Host: " + searchKey.toString() );
+    	userCollection.find({"users" : searchKey},
+    		function (err, result)
+    		{
+    			if (err)
+    			{
+    				console.log(err);
+                    return response.send(400, "Password or username incorrect");
+    			}
+    			result.next(function (err, foundUser)
+    			{
+                    if(err) throw err;
+                    if(!foundUser)
+                    {
+                        console.log("User fail: " + searchKey);
+                        console.log("Password: " + pw);
+        				return response.send(400, "Password or username incorrect");
+                    }
+                    if(pw != foundUser.password) 
+                    {
+                        console.log("PW FAIL : " + result.password);
+                        return(400,  "Password or username incorrect");
+                    }
+                    return response.send(200, foundUser);
+    			})
+    		});
+    }
+);
 

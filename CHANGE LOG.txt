@@ -1,3 +1,15 @@
+:: 17/10/18 : -----------------------------------------------------
+ADDED: 
+> serverside.js :: Runs as a node
+                :: Connects to Mongo
+                :: Currently only has a user verification method. 
+    
+CHANGED:
+> index.html     :: tweaking and stuff
+> navigation.js  :: Edited to communicate with serverside.js 
+
+
+
 :: 29/09/18 :: -----------------------------------------------------
 
 CHANGED:

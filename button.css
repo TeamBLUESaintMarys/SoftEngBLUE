@@ -1,0 +1,60 @@
+h1 
+{
+	font-size: 150%;
+}
+
+body
+{
+	background-color: black;
+}
+
+#newEpage
+{
+  background-color: yellow;
+}
+
+#submitEbtn
+{
+  background-color: lime;
+}
+
+#eDescription
+{
+  width: 100px;
+  height:100px;
+}
+
+#btnBack1, #btnBack2, #btnBack3, #btnBack4,#btnBack5,#btnBack6 {
+  background-color: cyan;
+}
+
+#btnLogout,#btnDelete
+{
+  background-color: red;
+}
+
+.btnback
+{
+	width: 100%;
+	background-color: yellow !important;
+}
+
+.menduBtn
+{
+	background-color: yellow !important;
+}
+
+.memodisp
+{
+	background-color: yellow !important;
+}
+
+.bgyellow
+{
+	background-color: yellow !important;
+}
+
+.bgblack
+{
+	background-color: black !important;
+}

@@ -1,0 +1,23 @@
+Connected To mySQL
+Listening on port 34567
+::
+User Connected iD:11
+User Connect To User Id: 11 Room Count: 1
+Getting users For User
+Getting users For User: 11
+Getting messages For User
+----Get--MESSAGE----
+----END_LOG----
+Getting message For User: 11
+User Connected iD:11
+User Connect To User Id: 11 Room Count: 2
+User Connected iD:12
+User Connect To User Id: 12 Room Count: 1
+User Connected iD:12
+User Connect To User Id: 12 Room Count: 2
+User Connected iD:13
+User Connect To User Id: 13 Room Count: 1
+User Connected iD:13
+User Connect To User Id: 13 Room Count: 2
+User Connected iD:15
+User Connect To User Id: 15 Room Count: 1

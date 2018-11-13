@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+	<title>Assitive Living Made Easy </title>
+
+	<!--Adjusting the page on mobile screen  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<!-- CSS -->
+
+	<!-- S<link rel="stylesheet" type="text/css" href="button.css"> -->
+	<link rel="stylesheet" href='/css/bootstrap.css'  />
+	<link rel="stylesheet" href='/css/messenger.css'  />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href='/css/icons/icon.css'  />
+	<link rel="stylesheet" href="/css/MenueIcons/menuIcon.css" />
+	<link rel="stylesheet" href="/css/jquery.mobile-1.4.5.min.css" />
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src = "/scripts/socketio.js"> </script>
+	<script src = "/scripts/myScripts.js"> </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script src="/scripts/voiceComms.js"></script> 
+
+
+
+	<link rel="stylesheet" href="/css/panel.css" />
+	<link id="theme" rel="stylesheet" href="daniel2.css" />
+
+</head>
+
+<body class="wbPage">
+
+	<!-- =================================== LOG IN PAGE ===============================================-->
+	<div data-role="page" id="pageHome" class="wbPage">
+		<div data-role="header" class="wbHeader">
+			<h2 style="font-size: 200%; width:100%; text-align: left; margin-left: 15%; margin-right: 15%;" class="d-lg-none wbLabelText" id="egEvent" onclick="eg()">
+			THE WORKER BEE</h2>
+			<h2 style="font-size: 200%;" class="d-none d-lg-block wbLabelText">THE WORKER BEE</h2>
+		</div>
+		<div data-role="controlgroup" id="inputGroup"  align="center">
+			<input name = 'userName' type="text" id="userName" class="wbInputField"><h2><em class="wbLabelText">USERNAME</em></h2></input>
+		</div>
+		<div data-role="controlgroup" id="inputGroup"  align="center">
+			<input name = 'passcode' type="password" id="passcode" class="wbInputField">
+			<h2><em class="wbLabelText">PASSCODE</em></h2></input>
+		</div>
+
+		<!-- NUM PAD CODE -->
+		<div data-role="controlgroup" id="numKeyPad">
+			<a id = "LogInButton" data-role="button" id="LogIn" class="wbStdBtn">
+				<h3>LogIn</h3>
+			</a>
+			<a href="#createuser" data-role="button" id="btnCreateUser" data-transition="flip" class="wbStdBtn">
+				<h3>Create New User</h3>
+			</a>
+			<div data-role="button" id = "loginError"></div>
+		</div>
+		<div data-role="controlgroup" data-type="horizontal" align="center">
+			<a data-role="button" onclick="addValueToPassword(7)" class="wbNumBtn"><h4>7</h4></a>
+			<a data-role="button" onclick="addValueToPassword(8)" class="wbNumBtn"><h4>8</h4></a>
+			<a data-role="button" onclick="addValueToPassword(9)" class="wbNumBtn"><h4>9</h4></a>
+		</div>
+		<div data-role="controlgroup" data-type="horizontal" align="center">
+			<a data-role="button" onclick="addValueToPassword(4)" class="wbNumBtn"><h4>4</h4></a>
+			<a data-role="button" onclick="addValueToPassword(5)" class="wbNumBtn"><h4>5</h4></a>
+			<a data-role="button" onclick="addValueToPassword(6)" class="wbNumBtn"><h4>6</h4></a>
+		</div>
+		<div data-role="controlgroup" data-type="horizontal" align="center">
+			<a data-role="button" onclick="addValueToPassword(1)" class="wbNumBtn"><h4>1</h4></a>
+			<a data-role="button" onclick="addValueToPassword(2)" class="wbNumBtn"><h4>2</h4></a>
+			<a data-role="button" onclick="addValueToPassword(3)" class="wbNumBtn"><h4>3</h4></a>
+		</div>
+		<div data-role="controlgroup" data-type="horizontal" align="center">
+			<a data-role="button" onclick="addValueToPassword(0)" class="wbNumBtn"><h4>0</h4></a>
+			<a data-role="button" onclick="addValueToPassword('bksp')"
+			data-icon="delete" class="wbNumBtn"><h4>del</h4></a>
+		</div>
+	</div>
+
+
+	<!--===================================  About Page  ===============================================-->
+	<div data-role="page" id="pageAbout" class="wbPage">
+		<div data-role="header"  data-position="fixed" class="wbHeader">
+			<h1 style="align-items: left; margin-left: 10px; margin-right: 10px;">
+				<a href="#pageMenu" data-role="button" class="wbStdBtn">
+					<h1>BACK</h1>
+				</a>
+			</h1>
+		</div><!-- /header -->
+
+		<div data-role="content" class="wbContent">
+			<p class="wbLabelText">This is a project made on behalf of Saint Mary's University to help the residence at Northwoord Care Center.
+			This project and app is completely open-source in nature and may by used by anyone.</p>
+
+			<p class="wbLabelText">Regards,</p>
+
+			<p class="wbLabelText">-Team BLUE</p>
+
+			<p class="wbLabelText">CREDITS:</p>
+			<p class="wbLabelText"> Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+			
+			<p class="wbLabelText">Voice Commands</p>
+			<p class="wbLabelText">go to "page"</p>
+			<p class="wbLabelText">change color</p>
+		</div>
+	</div>
+
+	<!-- Create User Page -->
+	<div data-role="page" id="createuser">
+
+	</div>
+
+	<!--============================= Menu page ==========================================================-->
+	<!-- Edited by Ben Hollis, Nov 4, 2018 -->
+	<!-- Added Icons to menu buttons as well as styling for the buttons -->
+	<div data-role="page" id="pageMenu" class="wbPage"> 
+		<div data-role="content" class="wbContent">
+			<a class="wbStdBtn" href="#pageMemo" data-role="button">
+				<h1>MEMO
+					<img class="menuIcon" src="./css/MenueIcons/check-list.png" alt=""/>
+				</h1>
+			</a>
+			<a class="wbStdBtn" href="#pageEvents" data-role="button">
+				<h1>EVENT
+					<img class="menuIcon" src="./css/MenueIcons/calendar.png" alt=""/>
+				</h1>
+			</a>
+			<a class="wbStdBtn" href="#pageMessanger" data-role="button">
+				<h1>MESSAGING
+					<img class="menuIcon" src="./css/MenueIcons/envelope.png" alt=""/>
+				</h1>
+			</a>
+			<a class="wbStdBtn"href="#pageRelax" data-role="button">
+				<h1>RELAX
+					<img class="menuIcon" src="./css/MenueIcons/peace-symbol.png" alt=""/>
+				</h1>
+			</a>
+			<a class="wbStdBtn" href="#pageAbout" data-role="button">
+				<h1>ABOUT</h1>
+				<img class="menuIcon" src="./css/MenueIcons/information.png" alt=""/>
+			</a>
+		</div>
+
+		<div data-role="footer" data-position="fixed" class="wbFooter">
+			<h1><a href="#pageHome" id="btnLogout" data-role="button" data-theme = "c" class="wbStdBtn">
+				<h1>LOGOUT</h1>
+			</a>
+		</h1>
+	</div>
+</div>
+
+<!--=======================================================================================================-->
+<!--                                             MEMO PAGE AREA                                            -->
+<!--=======================================================================================================-->
+
+<!--=============================================Memo Page ================================================-->
+<div data-role="page" id="pageMemo" class="wbPage">
+	<div data-role="header"  data-position="fixed" class="wbHeader">
+		<h1 style="align-items: left; margin-left: 10px; margin-right: 10px;">
+			<a href="#pageMenu" data-role="button" class="wbStdBtn">
+				<h1>BACK</h1>
+			</a>
+		</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" class="wbContent">
+		<table id="memoTable" align="center" width="100%">
+
+		</table>
+	</div>
+
+	<div data-role="footer" data-position="fixed" class="wbFooter">
+		<h1><a href="#pageNewMemo" data-role="button" style="width:100%" class="wbStdBtn"><h1>NEW</h1></a></h1>
+	</div>
+</div>
+
+<!--======= NEW MEMO PAGE -- 29/09/18 ADDED BY DANIEL =========================-->
+<div data-role="page" id="pageNewMemo" class="wbPage">
+	<div data-role="header" data-position="fixed" class="wbHeader">
+		<h1 style="min-width: 100%; align-items: left; margin-left: 10px; margin-right: 40px; padding-right: 20px;">
+			<a href="#pageMemo" data-role="button" style="width:100%" class="wbStdBtn">
+				<h1>DISCARD</h1>
+			</a>
+		</h1>
+	</div>
+
+	<div data-role="content">
+		<form id="formNewMemo" action="">
+			<div data-role="fieldcontain">
+				<div data-role="fieldcontain">
+					<label for="memoTitle"><h1 class="wbLabelText">TITLE: </h1></label><br>
+					<h1><br><input type="text" name="memoTitle" data-mini="false"
+						id="memoTitle" value="" class="wbInputField" id="memoTitleInput"></h1>
+					</div>
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="memoText"><h1 class="wbLabelText">MEMO TEXT:</h1></label><br>
+					<h1><textarea rows="4" cols="80" style="resize: none;" class="wbInputField" maxlength="2000" id="memoTextInput"></textarea></h1>
+				</div>
+			</form>
+		</div>
+
+		<div data-role="footer" data-position="fixed" class="wbFooter">
+			<h1><a href="#pageNewMemo" data-role="button" style="width:100%" class="wbStdBtn" id="saveMemo"><h1>SAVE</h1></a></h1>
+		</div>
+	</div><!-- CLOSE NEWMEMO -->
+
+	<!--==============              Display memo by Daniel      ===============-->
+	<div data-role="page" id="pageDisplayMemo" class="wbPage">
+		<div data-role="header" data-position="fixed" class="wbHeader">
+			<h1 style="min-width: 100%; align-items: left; margin-left: 10px; margin-right: 40px; padding-right: 20px;">
+				<a href="#pageMemo" data-role="button" class="wbStdBtn">
+					<h1>BACK</h1>
+				</a>
+			</h1>
+		</div> <!-- Close header -->
+
+		<div data-role="content" class="wbContent">
+			<form id="frmNewRecordMemo" action="">
+				<div data-role="fieldcontain">
+					<div data-role="fieldcontain">
+						<h2><input type="text" name="memoTitleDisp" data-mini="false"
+							id="memoTitleDisp" value="THIS IS A MEMO" readonly="true" class="wbInputField">
+						</h2>
+					</div>
+				</div>
+				<div data-role="fieldcontain">
+					<h3><textarea rows="4" cols="80" style="resize: none;" maxlength="2000" readonly="true" id="memoDispText" class="wbInputField">The text for memos will be placed in this spot by our javascript. It will be taken from the server.</textarea></h3>
+
+				</div>
+			</form>
+		</div>
+
+		<div data-role="footer" data-position="fixed" class="wbFooter">
+			<h1><a href="#newMemo" id="btnDelete" data-role="button" class="wbStdBtn"><h1>DELETE</h1></a></h1>
+		</div>
+	</div><!--CLOSE DISPLAYMEMO -->
+
+	<!--================================================================-->
+	<!--                      EVENTS PAGE AREA                          -->
+	<!--================================================================-->
+
+	<!-- ===================== Events page - Edited by KYLE HISCOCK  ============-->
+	<div data-role="page" id="pageEvents" class="wbPage">
+		<div data-role="header" class="wbHeader">
+			<h1 style="min-width: 100%; align-items: left; margin-left: 10px; margin-right: 40px; padding-right: 20px;">
+				<a href="#pageMenu" data-role="button" class="wbStdBtn"><h1>BACK</h1></a></h1>
+			</div>
+			<h1 style="text-align: center;" class="wbLabelText">Events Feed</h1>
+			<div data-role="content" class="wbContent">
+				<div data-role="fieldcontain" id="divUserSection">
+					<div data-role="fieldcontain">
+						<a data-role="button" class="wbStdBtn">
+						Bocce Tournament</a>
+						<a data-role="button" class="wbStdBtn">
+						Bridge Game</a>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="footer" data-position="fixed" class="wbFooter">
+				<h1><a href="#pageNewEvent" class="wbStdBtn" data-role="button">
+					<h1>NEW EVENT</h1>
+				</a>
+			</h1>
+		</div>
+	</div>
+
+	<!--==================    Event Page ~Razan  =================================-->
+	<div data-role="page" id="pageNewEvent" class="wbPage">
+		<div data-role="header" data-position="fixed" class="wbHeader">
+			<h1 style="min-width: 100%; align-items: left; margin-left: 10px; margin-right: 40px; padding-right: 20px;">
+				<a href="#pageEvents" class="wbStdBtn" data-role="button">
+					<h1>BACK</h1>
+				</a>
+			</h1>
+		</div><!-- /header -->
+
+		<div data-role="content">
+			<div data-role="fieldcontain">
+				<p data-role="label" for="eventName"><h2 class="wbLabelText">Event Name</h2></p>
+				<input data-role="text" name="eventName" data-mini="false" id="eName" value="" class="wbInputField">
+				<p data-role="label" for="eventDate" class="wbLabelText"><h2 class="wbLabelText">Date</h2></p>
+				<input data-role="date" type="date" class="wbInputField">
+				<p data-role="label" for="eventType"><h2 class="wbLabelText">Type</h2></p>
+				<form class="wbInputField">
+					<div class="typeDown" class="wbInputField">
+						<select name="selectType" id="selectType" class="wbInputField">
+							<option value="1">Sport</option>
+							<option value="2">Social</option>
+							<option value="3">Games</option>
+							<option value="4">Outting</option>
+							<option value="5">Movie</option>
+						</select>
+					</div>
+				</form>
+				<!-- <p data-role="label" for="eventTime"><h2 class="wbLabelText">Time</h2></p> -->
+				<p data-role="label" for="eventSt"><h3 class="wbLabelText">Start:</h3></p>
+				<form>
+					<fieldset data-role="controlgroup" data-type="horizontal">
+						<input name="radioTD" id="radioAMS" value="on" checked="checked" type="radio">
+						<label for="radioAMS">AM</label>
+						<input name="radioTD" id="radioPMS" value="off" type="radio">
+						<label for="radioPMS">PM</label>
+					</fieldset>
+				</form>
+				<br>
+				<form>
+					<div class="timeDdown" class="wbInputField">
+						<select name="selectAMH" id="selectAMH" class="wbInputField" style="text-align: center">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</div>
+				</form>
+				<br>
+				<form>
+					<fieldset data-role="controlgroup" data-type="horizontal">
+
+						<input name="radioMin" id="radioM00A" value="on" checked="checked" type="radio">
+						<label for="radioM00A">00</label>
+						<input name="radioMin" id="radioM15A" value="off" type="radio">
+						<label for="radioM15A">15</label>
+						<input name="radioMin" id="radioM30A" value="other" type="radio">
+						<label for="radioM30A">30</label>
+						<input name="radioMin" id="radioM45A" value="other" type="radio">
+						<label for="radioM45A">45</label>
+					</fieldset>
+				</form>
+				<p data-role="label" for="eventFin"><h3 class="wbLabelText">End:</h3></p>
+				<form>
+					<fieldset data-role="controlgroup" data-type="horizontal">
+						<input name="radioTD" id="radioAME" value="on" checked="checked" type="radio">
+						<label for="radioAME">AM</label>
+						<input name="radioTD" id="radioPME" value="off" type="radio">
+						<label for="radioPME">PM</label>
+					</fieldset>
+				</form>
+				<br>
+				<form>
+					<div class="timeDdown">
+						<select name="selectPMH" id="selectPMH" class="wbInputField">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</div>
+				</form>
+				<br>
+				<form>
+					<fieldset data-role="controlgroup" data-type="horizontal">
+						
+						<input name="radioMin" id="radioM00P" value="on" checked="checked" type="radio">
+						<label for="radioM00P">00</label>
+						<input name="radioMin" id="radioM15P" value="off" type="radio">
+						<label for="radioM15P">15</label>
+						<input name="radioMin" id="radioM30P" value="other" type="radio">
+						<label for="radioM30P">30</label>
+						<input name="radioMin" id="radioM45AP" value="other" type="radio">
+						<label for="radioM45AP">45</label>
+					</fieldset>
+				</form>
+				<p data-role="label"for="eventLocation"><h2 class="wbLabelText">Location</h2></p>
+				<input data-role="text" name="eventLocation" data-mini="false" id="lName" value="" class="wbInputField">
+				<p data-role="label" for="eventDescrition"><h2 class="wbLabelText">Description</h2></p>
+				<input data-role="text" name="eventDescription" data-mini="false" id="eDescription" value="" class="wbInputField" style="width: 100%">
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed" class="wbFooter">
+			<h1><a href="" data-role="button" id="submitEbtn" class="wbStdBtn"><h1>Submit</h1></a></h1>
+		</div>
+	</div>
+
+	<!--================================================================-->
+	<!--                   MESSANGER PAGE AREA                          -->
+	<!--================================================================-->
+
+	<!--Messanger Page-->
+	<div data-role="page" id="pageMessanger" class="wbPage" >
+		<div data-role="header"  data-position="fixed" id="hello" class="wbHeader">
+			<div class="row" >
+				<div class="col-6">
+					<a href="#contactResidents" data-role="button" class="wbStdBtn">
+						<h1>FRIENDS</h1>
+					</a>
+				</div>
+				<div class="col-6">
+					<a href="#pageMenu" data-role="button" class="wbStdBtn">
+						<h1>BACK</h1>
+					</a>
+				</div>
+
+			</div>
+			<div data-role="controlgroup" id="currentUser"  align="center" class = "avatar">
+				<h2 id = "activeUserH1" class="wbLabelText"></h2>
+			</div>
+		</div>
+
+
+		<div data-role="panel" id="contactResidents" data-position="left" data-display="push" class = "messagePanel wbPage" >
+			<form>
+				<input id="filterTable-input" data-type="search">
+			</form>
+			<br>
+			<br>
+			<br>
+			<ul data-role="listview" data-filter="true" data-input="#filterTable-input" class="ui-responsive" id = "listViewContact">
+
+			</ul>
+		</div>
+
+		
+		<div  data-role = "content">
+			<div data-role="controlgroup" id="chatGroup"  align="center" >
+				<!--Messages Goes Here -->
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="wbFooter"> <!--BeginFooter-->
+			<div class="ui-grid-a" align="center">
+
+				<div class="ui-block-a" style="width:100%">
+					<h1>
+						<textarea name="textarea-1" id="inputMessage" class="wbInputField"></textarea>
+					</h1>
+				</div>
+				<div class="ui-block-b" style ="width:100%"><a id = "SendButton"  data-role="button" class="wbStdBtn"><h1>Send</h1></a></h1></div>
+
+			</div>
+		</div><!--Endfooter-->
+
+	</div>
+
+
+	<!--================================================================-->
+	<!--                       RELAX PAGE AREA                          -->
+	<!--================================================================-->
+	<div data-role="page" id="pageRelax" class="wbPage">
+		<div data-role="header" data-position="fixed" class="wbHeader">
+			<h1 style="min-width: 100%; align-items: left; margin-left: 10px; margin-right: 40px; padding-right: 20px;">
+				<a href="#pageMenu" id="btnBack6" data-role="button"class="wbStdBtn">
+					<h1>BACK</h1>
+				</a>
+			</h1>
+		</div><!-- /header -->
+
+		<div data-role="content" class="wbContent">
+			<a href="" data-role="button" class="wbStdBtn"><h1>1 MINUTE</h1></a>
+			<a href="" data-role="button" class="wbStdBtn"><h1>2 MINUTES</h1></a>
+			<a href="" data-role="button" class="wbStdBtn"><h1>5 MINUTES</h1></a>
+			<a href="" data-role="button" class="wbStdBtn"><h1>10 MINUTES</h1></a>
+		</div>
+	</div>
+
+	<!--Custom Javascript/Jquery -->
+	<script src='scripts/Navigation.js'></script>
+	<script src='scripts/pageLoader.js' ></script>
+	<script type="text/javascript"></script>
+	<script src='scripts/memo.js'></script>
+	<script src = "/scripts/timestamp.js"> </script>
+	<script src='scripts/loginScript.js' ></script>
+	<script src='scripts/autoLogin.js' ></script>
+	<script src = "/scripts/messenging.js"> </script>
+
+
+</body>
+
+</html>

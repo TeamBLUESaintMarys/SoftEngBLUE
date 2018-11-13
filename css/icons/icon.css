@@ -1,0 +1,9 @@
+.ui-icon-message:after {
+	background-image: url("mail.svg");
+	width: 100px;  // 14px * 2
+  	height: 100px; // 14px * 2
+}
+/* Fallback */
+.ui-nosvg .ui-icon-message:after {
+	background-image: url("mail.svg");
+}

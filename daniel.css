@@ -1,0 +1,54 @@
+.wbPage
+{
+	background : black !important;
+}
+
+.wbHeader
+{  
+	background : black !important;
+}
+
+.wbFooter
+{
+	background : black !important;
+}
+
+.wbInputField
+{
+	color : black !important;
+	background : yellow !important;
+}
+
+.wbLabelText
+{
+	color : yellow !important;
+	background: black !important;
+}
+
+option
+{
+	text-align: center !important;
+}
+.wbStdBtn
+{
+	width: 100%;
+	color : black;
+	background-color: yellow !important;
+}
+
+.wbNumBtn
+{
+	color : black !important;
+	background-color: yellow !important;
+}
+
+form fieldset input[type="radio"]:checked + label
+{
+	color : red;
+	background-color: red !important;
+}
+
+.wbContent
+{
+	background: black;
+}

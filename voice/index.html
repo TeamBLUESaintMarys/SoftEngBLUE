@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <head>
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Voice Controlled Notes App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+		-->	
+	<link rel="stylesheet" type="text/css" href="/button.css">
+        <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href='/css/bootstrap.css'  />
+  	<link rel="stylesheet" href='/css/messenger.css'  />
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" href='/css/icons/icon.css'  />
+ 	<link rel="stylesheet" href="/css/MenueIcons/menuIcon.css"/>
+ 	<link rel="stylesheet" href="/css/jquery.mobile-1.4.5.min.css" id="css1">
+ 	<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	
+
+
+  -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="/scripts/socketio.js"> </script>
+  
+
+
+
+    </head>
+    <body>     
+	<div class="content" data-role="page" role="main">
+
+            <h1>Notes App</h1>
+			
+            <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+
+            <div class="app"> 
+                
+                <div class="input-single">
+                    <textarea id="note-textarea" rows="6"></textarea>
+                </div>         
+                <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+                <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
+		<button id="clear-txt-btn" title="Clear Text">Clear Text</button>
+                <button id="save-note-btn" title="Save Note">Save Note</button>   
+				<p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p>                <h3>My Notes</h3>
+                <ul id="notes">
+                    <li>
+                        <p class="no-notes">You don't have any notes.</p>
+                    </li>
+                </ul>
+
+            </div>
+	<button id="del-cook-btn" title="Delete Cookie">Delete Login Cookie</button> 
+	<button id="back-btn" title="Back">Back</button>  
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+
+
+
+    </body>
+</html>
+
+

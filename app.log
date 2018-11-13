@@ -1,0 +1,18 @@
+Wed, 07 Nov 2018 18:10:05 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Wed, 07 Nov 2018 18:10:05 GMT connect deprecated limit: Restrict request size at location of read at node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+Connected To mySQL
+Listening on port 34567
+::
+/home/student_terry/project3428b/serverside_scripts/serversidecopy.js:225
+    var cookies= socket.request.headers.cookie.split(';');
+                                              ^
+
+TypeError: Cannot read property 'split' of undefined
+    at getSession (/home/student_terry/project3428b/serverside_scripts/serversidecopy.js:225:47)
+    at Namespace.<anonymous> (/home/student_terry/project3428b/serverside_scripts/serversidecopy.js:98:24)
+    at emitOne (events.js:77:13)
+    at Namespace.emit (events.js:169:7)
+    at Namespace.emit (/home/student_terry/project3428b/serverside_scripts/node_modules/socket.io/lib/namespace.js:213:10)
+    at /home/student_terry/project3428b/serverside_scripts/node_modules/socket.io/lib/namespace.js:180:14
+    at nextTickCallbackWith0Args (node.js:489:9)
+    at process._tickCallback (node.js:418:13)

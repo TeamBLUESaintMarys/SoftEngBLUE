@@ -1,0 +1,87 @@
+ /* Chat containers */
+
+ .grids {
+    
+    text-align :center;
+    line-height: 153px;
+}
+.container{
+    position: relative;
+    border: 2px solid #000000;
+    background-color: 	 #ffcccc;
+    border-radius: 0%;
+    padding: 10px;
+    margin: 10px 0;
+    display : block; 
+    overflow-wrap: break-word; 
+    max-width : 100%;
+}
+
+.messageBody{
+    position: relative;
+    border: 1px solid #0a0202;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display : block; 
+    overflow-wrap: break-word; 
+    max-width : 60%;
+}
+
+/* Darker chat container */
+.darker{
+    border-color: rgb(0, 0, 0);
+    background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container::before {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style images */
+.container img {
+    height: auto;
+    float: left;
+    max-width: 15%;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+    float: right;
+    margin-left: 10px;
+    margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+    position: absolute;
+    
+    float: right;
+    bottom: 0; 
+    font-style:italic;
+    color: rgb(22, 1, 1);
+}
+
+/* Style time text */
+.time-left {
+
+    position: absolute;
+    float: left;
+    bottom: 0; 
+    font-style:italic;
+    color:rgb(14, 0, 0);
+} 
+
+

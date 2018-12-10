@@ -1,0 +1,57 @@
+/* Mostly Daniel DD:01*/
+* {
+    
+	font: Calibri,sans-serif !important;
+	text-transform: uppercase;
+	overflow-wrap: break-word;
+}
+
+.wbPage
+{
+	background : black !important;
+}
+
+.wbHeader
+{  
+	background : black !important;
+}
+
+.wbFooter
+{
+	background : black !important;
+}
+
+.wbInputField
+{
+	color : black !important;
+	background : yellow !important;
+}
+
+.wbLabelText
+{
+	color : yellow !important;
+	background: black !important;
+}
+
+option
+{
+	text-align: center !important;
+}
+.wbStdBtn
+{
+	width: 100%;
+	max-width: 100%;
+	color : black;
+	background-color: yellow !important;
+}
+
+.wbNumBtn
+{
+	color : black !important;
+	background-color: yellow !important;
+}
+
+.wbContent
+{
+	background: black;
+}

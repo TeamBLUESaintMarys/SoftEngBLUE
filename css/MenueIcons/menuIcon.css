@@ -1,0 +1,20 @@
+
+/*Ben Hollis, November 4, 2018*/
+/*Added styling for menu page */
+
+.menuIcon{
+display: inline;
+width: 40px;
+margin-top: 10px;
+padding-left: 10px;
+}
+
+.menuHeader{
+display: inline;
+}
+
+.menuBtn{
+display: flex;
+justify-content: center;
+align-items: center;
+}

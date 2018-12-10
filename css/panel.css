@@ -1,0 +1,31 @@
+.ui-panel.ui-panel-open {
+    position:fixed;
+    word-break:break-all;
+    word-wrap: break-word; 
+    
+}
+
+.ui-panel-inner {
+    
+    position: absolute;
+    top: 0;
+    left: 100;
+    right: 100;
+    bottom: 0px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    word-break:break-all;
+    word-wrap: break-word; 
+    
+}
+/**
+index 0
+*/
+#pageMessanger * {
+    
+	font: 25px Calibri,sans-serif !important;
+	text-transform: uppercase;
+	overflow-wrap: break-word;
+}
+
+

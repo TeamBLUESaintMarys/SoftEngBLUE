@@ -1,0 +1,64 @@
+
+.pulseButton{
+    height: 100px;
+    width: 100px;
+    background-color:white;
+    border-radius:50%;
+    position: absolute;
+    transform: translate(0%,0%);
+
+}
+.pulseButton img{
+    margin: 5%;
+}
+.pulseButton:hover{
+    cursor: pointer;
+}
+.wave,.wave2{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(136, 14, 14);
+    transform: translate(0%,0%);
+    border-radius: 50%;
+    z-index: -1;
+    -webkit-animation:pulseEffect2 2s infinite linear;
+    -webkit-animation:pulseEffect 2s infinite linear;
+}
+@-webkit-keyframes pulseEffect{
+    from{
+        transform: translate(0%,0%) scale(0.5);
+        opacity: 0.4;
+    }
+    to{
+        transform: translate(0%,0%) scale(2.5);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes pulseEffect2{
+    from{
+        transform: translate(0%,0%) scale(0);
+        opacity: 0.6;
+    }
+    to{
+        transform: translate(0%,0%) scale(2.5);
+        opacity: 0;
+    }
+}
+#main:hover ~ #wave{
+    -webkit-animation:pulseEffect 5s infinite linear;
+}
+#main:hover ~ #wave2{
+    -webkit-animation:pulseEffect2 5s infinite linear;
+}
+
+
+
+
+
+
+
+
+
+
+

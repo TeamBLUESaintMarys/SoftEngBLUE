@@ -1,0 +1,55 @@
+/* Daniel, Copy Paste from other DD:02*/
+* 
+{   
+	font: Calibri,sans-serif !important;
+	text-transform: uppercase;
+	overflow-wrap: break-word;
+}
+.wbPage
+{
+	background : black !important;
+}
+
+.wbHeader
+{  
+	background : black !important;
+}
+
+.wbFooter
+{
+	background : black !important;
+}
+
+.wbInputField
+{
+	color : black !important;
+	background : red !important;
+}
+
+.wbLabelText
+{
+	color : red !important;
+	background: black !important;
+}
+
+option
+{
+	text-align: center !important;
+}
+.wbStdBtn
+{
+	width: 100%;
+	color : white !important;
+	background-color: red !important;
+}
+
+.wbNumBtn
+{
+	color : black !important;
+	background-color: red!important;
+}
+
+.wbContent
+{
+	background: black;
+}

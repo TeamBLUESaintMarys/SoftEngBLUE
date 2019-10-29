@@ -1,8 +1,6 @@
 # This is SMU Soft Eng Project 2018
 
-This will be a projected used to help create an application for residents at Continuing Care facility.
-
-
+This project was an assistant app for residents at a continuing care facility.
 
 You will need to import the following: java.util.ArrayLists java.util.Scanner
 
@@ -11,6 +9,7 @@ You will need to import the following: java.util.ArrayLists java.util.Scanner
     Tye B, Daniel D, Kyle H, Ben H, Devano B, Razan VK
 
     aka Team BLUE
+    
 ##### License
 BSD-2CLAUSE
 
